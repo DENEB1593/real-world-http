@@ -24,7 +24,7 @@ func main() {
 		"key2": {"value2"},
 		"key3": {"value3"},
 	}
-	resp, _ := http.PostForm("http://localhost:18888", values) //오류 처리 생략
+	resp, _ := http.PostForm("http://localhost:18888", values) // 오류 처리 생략
 	defer resp.Body.Close()
 	body, _ := ioutil.ReadAll(resp.Body)
 	log.Println(string(body))
